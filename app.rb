@@ -1,16 +1,23 @@
 require 'cuba'
-require 'rest-client'
+require 'cuba/contrib'
+require 'mote'
 require 'json'
+require 'rest-client'
 
 require './model/stattle_ship/basketball'
 
-# Routes
+Cuba.plugin Cuba::Mote
+
 Cuba.define do
   stattle_ship_basketball = StattleShipBasketball.new
 
   on get do
     on root do
-      res.write "Choose your team"
+      render("index")
+    end
+
+    on "choose_team" do
+      render("choose_team")
     end
 
     on "gamelogs" do

@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blackout</title>
+  </head>
+  <body>
+    <h1>Blackout</h1>
+    <p>Check league-wide boxscores with your team blacked out so you can watch a replay like it was live!</p>
+    {{ content }}
+  </body>
+</html>
