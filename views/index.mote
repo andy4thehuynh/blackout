@@ -3,7 +3,5 @@ Choose your league:
 <br>
 <br>
 
-<form action="/league" method="post">
-  <input class="button" type="submit" name="nba" value="nba">
-  <input class="button" type="submit" name="nfl" value="nfl">
-</form>
+<a href="/teams?sport=nba" class="button">nba</a>
+<a href="/teams?sport=nfl" class="button">nfl</a>

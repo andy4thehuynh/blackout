@@ -1,0 +1,7 @@
+Choose your team:
+
+<br>
+
+% teams.each do |team|
+  <a href="/scores?blackout={{ team }}" class="button">{{ team }}</a>
+% end

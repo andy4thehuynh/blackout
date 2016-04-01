@@ -2,9 +2,7 @@ require 'rest-client'
 
 class StattleShipBasketball
   ACCESS_TOKEN = "235b7226da74698921f7421325c4e046"
-
   BASE_URI = "https://www.stattleship.com/"
-  GAME_LOG_URI = "https://www.stattleship.com/basketball/nba/game_logs"
 
   def headers
     {
@@ -14,8 +12,8 @@ class StattleShipBasketball
     }
   end
 
-  def gamelogs
-    response    = RestClient.get("#{GAME_LOG_URI}", headers)
+  def scores
+    response    = RestClient.get("#{BASE_URI}/basketball/nba/game_logs", headers)
     parsed_json = JSON[response]
 
     parsed_json["games"].map do |games|
