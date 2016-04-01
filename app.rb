@@ -17,12 +17,21 @@ Cuba.define do
       render("index")
     end
 
-    on "choose_team" do
-      render("choose_team")
-    end
-
     on "gamelogs" do
       render("gamelogs", gamelogs: stattle_ship_basketball.get_game_logs)
+    end
+  end
+
+  on "league" do
+    # Future, make a base StattleShip class and pass in league
+    on post, param("nba") do |league|
+      render("league", teams: StattleShipBasketball.new.teams)
+    end
+  end
+
+  on "gamelogs" do
+    on post do
+      render("gamelogs", gamelogs: StattleShipBasketball.new.gamelogs)
     end
   end
 end

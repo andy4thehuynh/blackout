@@ -1,0 +1,11 @@
+Choose your team:
+
+<br>
+
+<form action="/gamelogs" method="post">
+  % teams.each do |team|
+    <input class="button" type="submit" name="andy" value="{{ team }}">
+  % end
+</form>
+
+<a href="/gamelogs">Gamelogs</a>

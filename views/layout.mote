@@ -5,9 +5,17 @@
   </head>
   <link rel="stylesheet" href="/css/normalize.css" />
   <link rel="stylesheet" href="/css/skeleton.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
   <body>
-    <h1>Blackout</h1>
-    <p>Check league-wide boxscores with your team blacked out so you can watch a replay like it was live!</p>
-    {{ content }}
+    <div class="container">
+      <section class="header">
+        <h1><a href="/">Blackout</a></h1>
+        <p>Check league-wide boxscores with your team blacked out so you can watch a replay like it was live!</p>
+      </section>
+
+      <section class="content">
+        {{ content }}
+      </section>
+    </div>
   </body>
 </html>

@@ -1,4 +1,9 @@
-Choose your sport:
+Choose your league:
 
 <br>
-<a href="/choose_team">Basketball</a>
+<br>
+
+<form action="/league" method="post">
+  <input class="button" type="submit" name="nba" value="nba">
+  <input class="button" type="submit" name="nfl" value="nfl">
+</form>
