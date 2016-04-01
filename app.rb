@@ -7,6 +7,7 @@ require 'rest-client'
 require './model/stattle_ship/basketball'
 
 Cuba.plugin Cuba::Mote
+Cuba.use Rack::Static, urls: %w[/js /css /img], root: File.expand_path("./public", __dir__)
 
 Cuba.define do
   stattle_ship_basketball = StattleShipBasketball.new
@@ -21,7 +22,7 @@ Cuba.define do
     end
 
     on "gamelogs" do
-      res.write stattle_ship_basketball.get_game_logs
+      render("gamelogs", gamelogs: stattle_ship_basketball.get_game_logs)
     end
   end
 end

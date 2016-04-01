@@ -3,6 +3,8 @@
   <head>
     <title>Blackout</title>
   </head>
+  <link rel="stylesheet" href="/css/normalize.css" />
+  <link rel="stylesheet" href="/css/skeleton.css" />
   <body>
     <h1>Blackout</h1>
     <p>Check league-wide boxscores with your team blacked out so you can watch a replay like it was live!</p>
